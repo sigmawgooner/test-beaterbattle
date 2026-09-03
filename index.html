@@ -13,32 +13,26 @@
             box-sizing: border-box;
         }
 
-        html,
-        body {
+        html, body {
             width: 100%;
             height: 100%;
             overflow: hidden;
-        }
-
-        body {
-            position: relative;
             background: #000;
         }
 
         /* =========================
-           SKY GIF BACKGROUND
+           SKY
            ========================= */
 
         #sky {
             position: absolute;
-            top: 0;
-            left: 0;
 
             width: 100vw;
-            height: 100vh;
+            height: auto;
 
-            object-fit: cover;
-            object-position: center center;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
 
             image-rendering: pixelated;
 
@@ -46,7 +40,7 @@
         }
 
         /* =========================
-           PIXEL CHARACTER
+           PIXEL
            ========================= */
 
         #pixel {
@@ -56,12 +50,11 @@
             height: auto;
 
             left: 50%;
-            top: 6%;
+            top: 5%;
 
             transform: translateX(-50%);
 
             image-rendering: pixelated;
-            image-rendering: crisp-edges;
 
             z-index: 1;
         }
@@ -70,10 +63,7 @@
 
 <body>
 
-    <!-- Background -->
     <img id="sky" src="sky.gif" alt="">
-
-    <!-- Character -->
     <img id="pixel" src="pixel.png" alt="Pixel">
 
 </body>
