@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Pixel Game</title>
 
     <style>
@@ -19,7 +20,7 @@
             background: black;
         }
 
-        /* BACKGROUND */
+        /* SKY BACKGROUND */
         #sky {
             position: fixed;
             inset: 0;
@@ -51,13 +52,35 @@
 
             z-index: 1;
         }
+
+        /* PLAY BUTTON */
+        #play {
+            position: fixed;
+
+            width: 300px;
+            height: auto;
+
+            left: 50%;
+            top: 55%;
+
+            transform: translateX(-50%);
+
+            image-rendering: pixelated;
+
+            cursor: pointer;
+
+            z-index: 2;
+        }
     </style>
 </head>
 
 <body>
 
     <img id="sky" src="./sky.gif" alt="">
-    <img id="pixel" src="./pixel.png" alt="">
+    
+    <img id="pixel" src="./pixel.png" alt="Pixel">
+
+    <img id="play" src="./play.png" alt="Play">
 
 </body>
 </html>
