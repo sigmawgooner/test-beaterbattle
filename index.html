@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,44 +13,68 @@
             box-sizing: border-box;
         }
 
-        html, body {
+        html,
+        body {
             width: 100%;
             height: 100%;
             overflow: hidden;
         }
 
         body {
-            background-image: url("./sky.gif");
-            background-size: 100% 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-
             position: relative;
+            background: #000;
         }
+
+        /* =========================
+           SKY GIF BACKGROUND
+           ========================= */
+
+        #sky {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100vw;
+            height: 100vh;
+
+            object-fit: cover;
+            object-position: center center;
+
+            image-rendering: pixelated;
+
+            z-index: 0;
+        }
+
+        /* =========================
+           PIXEL CHARACTER
+           ========================= */
 
         #pixel {
             position: absolute;
 
-            /* Bigger */
-            width: 350px;
+            width: 475px;
             height: auto;
 
-            /* Upper-middle */
             left: 50%;
-            top: 18%;
+            top: 6%;
 
             transform: translateX(-50%);
 
-            /* Keeps pixel art crisp */
             image-rendering: pixelated;
+            image-rendering: crisp-edges;
+
+            z-index: 1;
         }
     </style>
 </head>
 
 <body>
 
-    <img id="pixel" src="./pixel.png" alt="Pixel">
+    <!-- Background -->
+    <img id="sky" src="sky.gif" alt="">
+
+    <!-- Character -->
+    <img id="pixel" src="pixel.png" alt="Pixel">
 
 </body>
 </html>
-```
