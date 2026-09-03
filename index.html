@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>My Game</title>
 
     <style>
@@ -20,19 +21,28 @@
         }
 
         body {
-            background-image: url("sky.gif");
-            background-size: cover;
+            background-image: url("./sky.gif");
+            background-size: 100% 100%;
             background-position: center;
             background-repeat: no-repeat;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            position: relative;
         }
 
         #pixel {
-            width: 200px;
+            position: absolute;
+
+            /* Bigger */
+            width: 350px;
             height: auto;
+
+            /* Upper-middle */
+            left: 50%;
+            top: 18%;
+
+            transform: translateX(-50%);
+
+            /* Keeps pixel art crisp */
             image-rendering: pixelated;
         }
     </style>
@@ -40,7 +50,7 @@
 
 <body>
 
-    <img id="pixel" src="pixel.png" alt="Pixel">
+    <img id="pixel" src="./pixel.png" alt="Pixel">
 
 </body>
 </html>
